@@ -1,0 +1,184 @@
+{% load static %}
+<! DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/main.css'%}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.min.css' %}">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <style>
+        .table.table-borderless td, .table.table-borderless th {
+            border: 0 !important;
+        }
+        .bg-dark{
+            background-color:rgba(255,255,255,0.1) !important;
+        }
+    </style>
+    <script type="text/javascript">
+         $('.counter').counterUp({
+    delay: 1000,
+    time: 1000
+});
+
+$(document).ready(function() {
+  alert("로딩 완료");
+});
+
+    </script>
+    </head>
+    <body>
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="position:absolute; height:80px;background:transparent;">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="navbar-brand" href="#" style="margin-bottom:5px;">
+                        <img src="{% static 'images/logo.png'%}" width="auto" height="50" style="margin-top:-11px;" alt="">
+                    </a>
+                </li>
+            
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">회원가입</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">이용방법</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">고객센터</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="color:white;">공지사항</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav> 
+    <div class="main">
+        <div class="bibi" style="text-align:center; color:white;">
+            <p style="font-size:25px;font-family:gog;">내 주변 헬스장 소개  및 양도권 거래 플랫폼</p>
+             <h1 class="ma">운동하다 지칠땐?<span class="baton"> 바통터치!</span></h1>
+             <br>
+             <br>
+             <br>
+             <button onclick="location.href='/map'" class="ui button" style="background:#7C4DFF;color:white;padding:20 50 20 50;border-radius: 30px;"><h5 style="font-family:'gog';">내 주변 <span style="font-family:'gog';">헬스장 / 양도권</span> 보러가기</h5></button>
+        </div>
+    </div>
+    <div class="mii">
+        <div class="row">
+            <div class="col" style="align-items: center;text-align:center;">
+                <div style="height:auto;margin-top:20px;">
+                    <p style="font-family:'gog';color:#7C4DFF; font-size:17px;font-family:'gog';">헬스/요가/필라테스/P . T</p>
+                    <p style="font-family:'gog';color:#7C4DFF; font-size:22px; font-weight:bold;font-family:'gog';">이용권 양도는 바톤터치</p>
+                </div>
+            </div>
+            <div class="col">
+                <table class="table table-borderless" style="text-align:center;border-color:0;">
+                    <tr style="border:0;">
+                        <td rowspan="2" style="width:20px;"><img src="{% static 'images/ba.png'%}" height="85px;" ></td>
+                        <td style="border:0;"><spans style="font-size:18px;color:#7C4DFF;font-family:'gog';font-weight:bold;">오늘까지 누적 양도 횟수</span></td>
+                    </tr>
+                    <tr style="border:0;">
+                        <td style="border:0;font-family:'gog';"><h3>107,883</h3></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table class="table table-borderless" style="text-align:center;border-color:0;">
+                    <tr style="border:0;">
+                        <td rowspan="2" style="width:20px;"><img src="{% static 'images/run.png'%}" height="85px;" ></td>
+                        <td style="border:0;"><spans style="font-size:18px;font-family:'gog';color:#7C4DFF;font-weight:bold;">바통터치 회원수</span></td>
+                    </tr>
+                    <tr style="border:0;">
+                        <td style="border:0;"><h3>200,333</h3></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col">
+                 <table class="table table-borderless" style="text-align:center;border-color:0;">
+                    <tr style="border:0;">
+                        <td rowspan="2" style="width:20px;"><img src="{% static 'images/ma.png'%}" height="85px;" ></td>
+                        <td style="border:0;"><spans style="font-size:18px;font-family:'gog';color:#7C4DFF;font-weight:bold;">제휴된 헬스장 수</span></td>
+                    </tr>
+                    <tr style="border:0;">
+                        <td style="border:0;"><h3>6,883</h3></td>
+                    </tr>
+                </table>
+            </div>  
+        </div>
+        <img src="{% static 'images/bb.png'%}" width="100%" style="margin-top:20px;">
+       <div class="container" style="text-align:center;">
+        <h5 style="font-size:28px;;font-family:'gog';">헬스 P.T 요가 필라테스</h5>
+        <h4 style="font-family:'gog';font-weight:bold;">바통터치에서</h4>
+        <h5 style="font-family:'gog';">내 주변 양도권을 확인해 보세요!!</h5>
+       </div>
+    </div>
+    <div class="mid">
+        <img src="{% static 'images/map.png'%}" height="750px;" style="bottom:-75px;position:absolute;left:13%;z-index:12;">
+        <div style="position:absolute; top: 50%; height:auto; margin-top:-68px; right:20%;text-align:center;">
+            <p style="font-size:30px;letter-spacing:3px;font-family:'gog';">지금 근처 헬스장을 쉽게 찾고,</p>
+            <p style="font-size:45px; font-weight:bold;font-family:'gog';">저렴한 양도권을 이용해 보세요!</p>
+        </div>
+        <div style="position:absolute;width:100%;height:60px;bottom:0;background:#d7dafd;z-index:10;">
+        </div>
+    </div>
+    <div class="mid" style="background:#e2e4fd;">
+        <img src="{% static 'images/ww.png'%}" height="750px;" style="bottom:-75px;position:absolute;right:13%;z-index:12;">
+        <div style="position:absolute; top: 50%; height:auto; margin-top:-84px; left:20%;text-align:center;">
+            <p style="font-size:30px;letter-spacing:3px;font-family:'gog';">6개월씩 끊은 헬스권..</p>
+            <p style="font-size:30px;letter-spacing:3px;line-height:2px;font-family:'gog';">더이상 이용하지 않는다면?</p>
+            <p style="font-size:45px; font-weight:bold;font-family:'gog';">남은 이용권을 판매해보세요!</p>
+        </div>
+        <div style="position:absolute;width:100%;height:60px;bottom:0;background:#d7dafd;z-index:10;">
+        </div>
+    </div>
+    <div class="mid">
+        <img src="{% static 'images/qwe.png'%}" height="750px;" style="bottom:-75px;position:absolute;left:13%;z-index:12;">
+        <div style="position:absolute; top: 50%; height:auto; margin-top:-84px; right:20%;text-align:center;">
+            <p style="font-size:30px;letter-spacing:3px;font-family:'gog';">곤란한 환불요청 고객에겐,</p>
+            <p style="font-size:30px;letter-spacing:3px;line-height:2px;font-family:'gog';">양도서비스</p>
+            <p style="font-size:45px; font-weight:bold;font-family:'gog';">바통터치를 소개해보세요!</p>
+        </div>
+    </div>
+    <footer style="height:250px; position:relative;">
+        <div style="position:absolute; bottom:0; left:10%;">
+          <img src="{% static 'images/baby.png'%}" height="40px;"><br>
+          <pre style="color:rgb(164,164,172);background:white;font-family:'gog';border:0;">바통터치 대표:스타트업 캠퍼스
+사업자 번호: 123-45-67890 통신판매업신고번호
+경기도 수원시 장안구 영화동 126-17번지 우리집
+
+COPYRIGHT 2019. BATONTOUCH ALL RIGHTS RESEVED
+<span class="counter">1,234,567.00</span>
+<span>$</span><span class="counter">1.99</span>
+<span class="counter">12345</span>
+          </pre>
+        </div>
+    </footer>
+    <script>
+  
+    </script>
+  </body>
+</html>

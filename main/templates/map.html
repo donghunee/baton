@@ -1,0 +1,307 @@
+{% load static %}
+<! DOCTYPE html>
+<html style="height:100%;">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/main.css'%}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/semantic.min.css' %}">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <style>
+        .overlay {
+    position:absolute;
+    left: -50px;
+    top:0;
+    width:100px;
+    height: 100px;
+    background: #fff;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    padding:5px;
+    font-size:12px;
+    text-align: center;
+    white-space: pre;
+    word-wrap: break-word;
+}
+        .im{
+            z-index:100;
+        }
+        .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+        .wrap * {padding: 0;margin: 0;}
+        .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+        .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+        .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+        .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+        .info .close:hover {cursor: pointer;}
+        .info .body {position: relative;overflow: hidden;}
+        .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+        .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+        .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+        .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+        .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+        .info .link {color: #5085BB;}
+    </style>
+    </head>
+    <body style="height:100%;">
+         <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="margin-bottom:0;background:transparent;">
+            <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="/" style="margin-bottom:5px;">
+                            <img src="{% static 'images/logo.png'%}" width="auto" height="50" alt="">
+                        </a>
+                    </li>
+                
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:white;">회원가입</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:white;">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:white;">이용방법</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:white;">고객센터</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:white;">공지사항</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav> 
+
+
+
+<div id="map" style="width:100%;height:100%;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=042a6c07bf4efa37bada03711c6016f2"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new daum.maps.LatLng(37.4978889, 127.0274488), // 지도의 중심좌표
+        level: 5 // 지도의 확대 레벨
+    };
+
+
+var imageSrc = "/static/images/marker.png";
+var imgSrc = "/static/images/marke.png";
+
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+    {
+        title: '카카오', 
+        latlng: new daum.maps.LatLng( 37.4971831, 127.02952200000004)
+    },
+    {
+        title: '생태연못', 
+        latlng: new daum.maps.LatLng(37.4974616, 127.02556800000002)
+    },
+    {
+        title: '텃밭', 
+        latlng: new daum.maps.LatLng(37.4962987, 127.02724549999994)
+    },
+    {
+        title: '근린공원',
+        latlng: new daum.maps.LatLng(37.4998217, 127.03038300000003)
+    }
+];
+
+var position = [
+    {
+        title: '카카오', 
+        latlng: new daum.maps.LatLng(37.498967, 127.02838369999995)
+    },
+    {
+        title: '생태연못', 
+        latlng: new daum.maps.LatLng(37.5019945, 127.02947429999995)
+    },
+    {
+        title: '텃밭', 
+        latlng: new daum.maps.LatLng(37.4946967, 127.03241520000006)
+    },
+    {
+        title: '근린공원',
+        latlng: new daum.maps.LatLng(37.5010988, 127.02279739999994)
+    }
+];
+
+// 마커 이미지의 이미지 주소입니다
+
+
+
+for (var i = 0; i < position.length; i ++) {
+
+    var content = document.createElement('div');
+        content.className = 'wrap';
+    
+    var info = document.createElement('div');
+        info.className='info';
+       
+        content.appendChild(info);
+
+    var title = document.createElement("div");
+        title.className="title"
+        title.innerHTML="스타트업 캠퍼스-양도"
+        info.appendChild(title);
+
+    var closeBtn = document.createElement('div');
+        closeBtn.className="close";
+        title.appendChild(closeBtn);
+
+    var body = document.createElement('div');
+        body.className = 'body';
+        info.appendChild(body);
+    
+    var img = document.createElement('div');
+        img.className="img";
+        body.appendChild(img);
+
+    var image = document.createElement('img');
+        image.className="im";
+        image.src="/static/images/marker.png";
+        image.height="70";
+        image.width="70";
+        img.appendChild(image);
+    
+    var desc = document.createElement('div');
+        desc.className="desc";
+        body.appendChild(desc);
+    
+    var ellipsis = document.createElement('div');
+        ellipsis.className="ellipsis";
+        ellipsis.innerHTML="여기는 어디 나는 누구";
+        desc.appendChild(ellipsis);
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new daum.maps.Size(75, 75); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new daum.maps.MarkerImage(imgSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: position[i].latlng, // 마커를 표시할 위치
+        title : position[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+
+    var overlay = new daum.maps.CustomOverlay({
+        position: marker.getPosition(),
+        content: content       
+    });
+
+    daum.maps.event.addListener(marker, 'click', makeOverListener(map, marker, overlay));
+     closeBtn.addEventListener('click', makeListener(map, marker, overlay));
+}
+
+
+
+for (var i = 0; i < positions.length; i ++) {
+
+    var content = document.createElement('div');
+        content.className = 'wrap';
+    
+    var info = document.createElement('div');
+        info.className='info';
+       
+        content.appendChild(info);
+
+    var title = document.createElement("div");
+        title.className="title"
+        title.innerHTML="스타트업캠퍼스-헬스장"
+        info.appendChild(title);
+
+    var closeBtn = document.createElement('div');
+        closeBtn.className="close";
+        title.appendChild(closeBtn);
+
+    var body = document.createElement('div');
+        body.className = 'body';
+        info.appendChild(body);
+    
+    var img = document.createElement('div');
+        img.className="img";
+        body.appendChild(img);
+
+    var image = document.createElement('img');
+        image.className="im";
+        image.src="/static/images/marker.png";
+        image.height="70";
+        image.width="70";
+        img.appendChild(image);
+    
+    var desc = document.createElement('div');
+        desc.className="desc";
+        body.appendChild(desc);
+    
+    var ellipsis = document.createElement('div');
+        ellipsis.className="ellipsis";
+        ellipsis.innerHTML="여기는 어디 나는 누구";
+        desc.appendChild(ellipsis);
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new daum.maps.Size(75,75); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+
+    var overlay = new daum.maps.CustomOverlay({
+        position: marker.getPosition(),
+        content: content       
+    });
+
+    daum.maps.event.addListener(marker, 'click', makeOverListener(map, marker, overlay));
+     closeBtn.addEventListener('click', makeListener(map, marker, overlay));
+}
+
+
+
+function makeOverListener(map,marker,overlay){
+    return function(){
+        overlay.setMap(map);
+    };
+}
+
+function makeListener(map,maker,overlay){
+      return function(){
+        overlay.setMap(null);
+    };
+}
+</script>
+
+    </body>
+</html>
