@@ -18,6 +18,7 @@ from django.urls import path
 from main import views
 
 urlpatterns = [
+    path('new/',views.new,name="name"),
     path('map/',views.map,name="map"),
     path('',views.home,name="home"),
     path('admin/', admin.site.urls),

@@ -21,3 +21,7 @@ def signup(request):
             auth.login(request,user)
             return redirect('blog')
     return render(request, 'signup.html')
+
+
+def new(request):
+    return render(request,'new.html')
