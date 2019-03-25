@@ -9,10 +9,10 @@ backend : django
 
 frontend : javascript
 
-웹 퍼블리싱.
-<img src="https://lh3.googleusercontent.com/Rwp6VrwjZWRaBaDhw5qqyASvwwDukQvrP8flwiGJqujEJbAzsrS3qGeAmNxPjEtiPr0WTrZNG9s" alt="enter image description here" width="700">
-![enter image description here](https://lh3.googleusercontent.com/Rwp6VrwjZWRaBaDhw5qqyASvwwDukQvrP8flwiGJqujEJbAzsrS3qGeAmNxPjEtiPr0WTrZNG9s=700x)
+웹 퍼블리싱.<br>
 
-![enter image description here](https://lh3.googleusercontent.com/MHwiIhfphL3dW53OLAeRRNIrXxjs9vSMLF6HA-Jk55GHLk-vOta2sQ_T8vrzziWezJ-DdKs-sQE)
+<img src="https://lh3.googleusercontent.com/Rwp6VrwjZWRaBaDhw5qqyASvwwDukQvrP8flwiGJqujEJbAzsrS3qGeAmNxPjEtiPr0WTrZNG9s" alt="enter image description here" width="650">
+<br>
+<img src="https://lh3.googleusercontent.com/MHwiIhfphL3dW53OLAeRRNIrXxjs9vSMLF6HA-Jk55GHLk-vOta2sQ_T8vrzziWezJ-DdKs-sQE" alt="enter image description here" width="650">
 
 
